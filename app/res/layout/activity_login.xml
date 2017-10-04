@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".LoginActivity"
+    tools:context="ir.mtnirancell.suldemo.LoginActivity"
     android:id="@+id/coordinator"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -25,17 +25,18 @@
 
             <ImageView
                 android:layout_width="96dp"
-                android:layout_height="96dp"
+                android:layout_height="230dp"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/appauth_96dp"
-                android:contentDescription="@string/openid_logo_content_description"/>
+                android:contentDescription="@string/openid_logo_content_description"
+                app:srcCompat="@drawable/appauth_96dp" />
 
             <TextView
+                style="@style/Base.TextAppearance.AppCompat.Title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/intro_header"
-                style="@style/Base.TextAppearance.AppCompat.Title" />
+                android:textSize="13sp" />
 
             <!--
             displayed while the discovery document is loaded, and dynamic client registration is
@@ -71,21 +72,6 @@
                 android:layout_marginBottom="8dp"
                 android:orientation="vertical">
 
-                <Button
-                    android:id="@+id/start_auth"
-                    style="@style/Widget.AppCompat.Button.Colored"
-                    android:text="@string/start_authorization"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/auth_options"
-                    android:layout_marginTop="16dp"
-                    style="@style/Base.TextAppearance.AppCompat.Subhead" />
-
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -103,45 +89,18 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/account_id_description"/>
+                    android:text="@string/alternative_login"
+                    android:textIsSelectable="true" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/browser_selector_label"
-                    android:labelFor="@+id/browser_selector"/>
-
-                <Spinner
-                    android:id="@+id/browser_selector"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-                <CheckBox
-                    android:id="@+id/pending_intents_checkbox"
+                <Button
+                    android:id="@+id/start_auth"
+                    style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/use_pending_intents"/>
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="@string/auth_settings"
-                    style="@style/Base.TextAppearance.AppCompat.Subhead"/>
-
-                <TextView
-                    android:id="@+id/auth_endpoint"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textIsSelectable="true" />
-
-                <TextView
-                    android:id="@+id/client_id"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textIsSelectable="true" />
+                    android:layout_gravity="center"
+                    android:text="@string/start_authorization"
+                    android:textAllCaps="false"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 

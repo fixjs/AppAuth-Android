@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 
-package net.openid.appauthdemo;
+package ir.mtnirancell.suldemo;
 
 import android.app.Activity;
 import android.app.LoaderManager.LoaderCallbacks;

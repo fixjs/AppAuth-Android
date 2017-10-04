@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 
-package net.openid.appauthdemo;
+package ir.mtnirancell.suldemo;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -38,6 +38,8 @@ import net.openid.appauth.AuthorizationServiceDiscovery;
 import net.openid.appauth.ClientAuthentication;
 import net.openid.appauth.TokenRequest;
 import net.openid.appauth.TokenResponse;
+import ir.mtnirancell.suldemo.GlideApp;
+import ir.mtnirancell.suldemo.R;
 
 import okio.Okio;
 
@@ -110,6 +112,14 @@ public class TokenActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+
+        fetchUserInfo();
+
+        View userInfoCard = findViewById(R.id.userinfo_card);
+        userInfoCard.setVisibility(View.INVISIBLE);
+
+        //welcomeMessage
+
 
         if (mExecutor.isShutdown()) {
             mExecutor = Executors.newSingleThreadExecutor();
@@ -240,6 +250,7 @@ public class TokenActivity extends AppCompatActivity {
                     name = userInfo.getString("name");
                 }
                 ((TextView) findViewById(R.id.userinfo_name)).setText(name);
+                ((TextView) findViewById(R.id.welcomeMessage)).setText("Welcome " + name + "!");
 
                 if (userInfo.has("picture")) {
                     GlideApp.with(TokenActivity.this)

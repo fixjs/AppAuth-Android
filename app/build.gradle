@@ -15,7 +15,6 @@ android {
                 'appAuthRedirectScheme': 'net.openid.appauthdemo'
         ]
     }
-
     signingConfigs {
         debugAndRelease {
             storeFile file("${rootDir}/appauth.keystore")
@@ -24,12 +23,10 @@ android {
             keyPassword "appauth"
         }
     }
-
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-
     buildTypes {
         debug {
             signingConfig signingConfigs.debugAndRelease
@@ -38,17 +35,21 @@ android {
             signingConfig signingConfigs.debugAndRelease
         }
     }
+    compileSdkVersion 26
+    buildToolsVersion '26.0.1'
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation project(':library')
     implementation "com.android.support:appcompat-v7:${rootProject.supportLibVersion}"
     implementation "com.android.support:design:${rootProject.supportLibVersion}"
     implementation 'com.github.bumptech.glide:glide:4.0.0'
     implementation 'com.squareup.okio:okio:1.13.0'
     implementation 'joda-time:joda-time:2.9.9'
-
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support:support-vector-drawable:26.1.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0'
 }
 

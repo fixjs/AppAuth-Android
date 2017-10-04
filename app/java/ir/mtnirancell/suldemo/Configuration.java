@@ -12,7 +12,7 @@
  * limitations under the License.
  */
 
-package net.openid.appauthdemo;
+package ir.mtnirancell.suldemo;
 
 import android.content.Context;
 import android.content.Intent;
@@ -25,6 +25,7 @@ import android.text.TextUtils;
 
 import net.openid.appauth.connectivity.ConnectionBuilder;
 import net.openid.appauth.connectivity.DefaultConnectionBuilder;
+import ir.mtnirancell.suldemo.R;
 
 import okio.Buffer;
 import okio.BufferedSource;

@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 The AppAuth for Android Authors. All Rights Reserved.
+ * Copyright 2017 The AppAuth for Android Authors. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
  * in compliance with the License. You may obtain a copy of the License at
@@ -12,18 +12,12 @@
  * limitations under the License.
  */
 
-package net.openid.appauthdemo;
+package ir.mtnirancell.suldemo;
 
-import android.support.v7.app.AppCompatDelegate;
+import com.bumptech.glide.annotation.GlideModule;
+import com.bumptech.glide.module.AppGlideModule;
 
-/**
- * Application object; ensures that the support library is correctly configured for use of
- * vector drawables.
- */
-public final class Application extends android.app.Application {
-    @Override
-    public void onCreate() {
-        super.onCreate();
-        AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
-    }
+@GlideModule
+public final class AppAuthGlideModule extends AppGlideModule {
+
 }

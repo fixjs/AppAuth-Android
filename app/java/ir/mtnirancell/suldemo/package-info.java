@@ -1,5 +1,5 @@
 /*
- * Copyright 2017 The AppAuth for Android Authors. All Rights Reserved.
+ * Copyright 2015 The AppAuth for Android Authors. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
  * in compliance with the License. You may obtain a copy of the License at
@@ -12,12 +12,8 @@
  * limitations under the License.
  */
 
-package net.openid.appauthdemo;
-
-import com.bumptech.glide.annotation.GlideModule;
-import com.bumptech.glide.module.AppGlideModule;
-
-@GlideModule
-public final class AppAuthGlideModule extends AppGlideModule {
-
-}
+/**
+ * App which demonstrates the use of the AppAuth library to authenticate a user with an IDP
+ * configured in res/raw/auth_config.json.
+ */
+package ir.mtnirancell.suldemo;
